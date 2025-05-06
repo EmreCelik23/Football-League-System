@@ -545,7 +545,7 @@ public class MatchServiceImpl implements IMatchService {
         return matchMapper.toMatchDTO(match);
     }
 
-    private void addMinuteAfterMatch(Match match, List<Player> players){
+    private void addMinuteAfterMatch(Match match, List<Player> players) {
         for (Player player : players){
             boolean hasSubstituted = false;
             for (SubstitutionEvent subs : match.getSubstitutions()){

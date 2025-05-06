@@ -44,6 +44,10 @@ public class AuthenticationService {
         String jwtToken = jwtService.generateToken(user);
 
         return AuthenticationResponse.builder()
+                .username(user.getUsername())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .role(user.getRole().toString())
                 .token(jwtToken)
                 .build();
     }
@@ -62,6 +66,10 @@ public class AuthenticationService {
         String jwtToken = jwtService.generateToken(user);
 
         return AuthenticationResponse.builder()
+                .username(user.getUsername())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .role(user.getRole().toString())
                 .token(jwtToken)
                 .build();
     }
