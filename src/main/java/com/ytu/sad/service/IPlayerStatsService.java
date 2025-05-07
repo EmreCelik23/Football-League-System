@@ -10,4 +10,6 @@ public interface IPlayerStatsService {
     PlayerStatsDTO getPlayerStatsByPlayerId(Integer playerId);
 
     void deletePlayerStatsByPlayerId(Integer playerId);
+
+    void resetAllPlayerStats();
 }

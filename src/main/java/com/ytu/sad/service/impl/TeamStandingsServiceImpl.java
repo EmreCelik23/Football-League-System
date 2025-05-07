@@ -46,4 +46,9 @@ public class TeamStandingsServiceImpl implements ITeamStandingsService {
         }
         teamStandingsRepository.delete(teamStandings);
     }
+
+    @Override
+    public void resetAllTeamStandings() {
+        teamStandingsRepository.resetAll();
+    }
 }

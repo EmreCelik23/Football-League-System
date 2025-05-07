@@ -36,4 +36,10 @@ public class PlayerStatsController {
         playerStatsService.deletePlayerStatsByPlayerId(playerId);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    @PostMapping("/reset")
+    public ResponseEntity<Object> resetAllPlayerStats() {
+        playerStatsService.resetAllPlayerStats();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }

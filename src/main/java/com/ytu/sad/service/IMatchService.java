@@ -36,4 +36,6 @@ public interface IMatchService {
     MatchDTO startMatch(Integer matchId);
 
     MatchDTO finishMatch(Integer matchId);
+
+    void resetAllMatches();
 }

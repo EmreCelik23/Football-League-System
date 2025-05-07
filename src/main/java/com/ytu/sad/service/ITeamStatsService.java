@@ -10,4 +10,6 @@ public interface ITeamStatsService {
     TeamStatsDTO getTeamStatsByTeamId(Integer teamId);
 
     void deleteTeamStatsByTeamId(Integer teamId);
+
+    void resetAllTeamStats();
 }

@@ -46,4 +46,9 @@ public class TeamStatsServiceImpl implements ITeamStatsService {
         }
         teamStatsRepository.delete(teamStats);
     }
+
+    @Override
+    public void resetAllTeamStats() {
+        teamStatsRepository.resetAll();
+    }
 }

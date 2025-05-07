@@ -545,6 +545,11 @@ public class MatchServiceImpl implements IMatchService {
         return matchMapper.toMatchDTO(match);
     }
 
+    @Override
+    public void resetAllMatches() {
+        matchRepository.deleteAll();
+    }
+
     private void addMinuteAfterMatch(Match match, List<Player> players) {
         for (Player player : players){
             boolean hasSubstituted = false;

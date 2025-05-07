@@ -104,4 +104,10 @@ public class MatchController {
     public ResponseEntity<MatchDTO> finishMatch(@PathVariable Integer matchId){
         return ResponseEntity.ok(matchService.finishMatch(matchId));
     }
+
+    @PostMapping("/reset")
+    public ResponseEntity<Object> resetAllMatches() {
+        matchService.resetAllMatches();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }

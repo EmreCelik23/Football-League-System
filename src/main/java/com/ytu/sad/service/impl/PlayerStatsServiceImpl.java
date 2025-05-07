@@ -46,4 +46,9 @@ public class PlayerStatsServiceImpl implements IPlayerStatsService {
         }
         playerStatsRepository.delete(playerStats);
     }
+
+    @Override
+    public void resetAllPlayerStats() {
+        playerStatsRepository.resetAll();
+    }
 }

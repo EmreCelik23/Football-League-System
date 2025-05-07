@@ -36,4 +36,10 @@ public class TeamStatsController {
         teamStatsService.deleteTeamStatsByTeamId(teamId);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    @PostMapping("/reset")
+    public ResponseEntity<Object> resetAllTeamStats() {
+        teamStatsService.resetAllTeamStats();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }

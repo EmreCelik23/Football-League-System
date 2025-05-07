@@ -36,4 +36,10 @@ public class TeamStandingsController {
         teamStandingsService.deleteTeamStandingsByTeamId(teamId);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    @PostMapping("/reset")
+    public ResponseEntity<Object> resetAllTeamStandings() {
+        teamStandingsService.resetAllTeamStandings();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
